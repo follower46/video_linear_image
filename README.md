@@ -47,6 +47,7 @@ An open source image generator for video files, similar to [moviepalette](https:
 ## Future Improvements
 
 * Support adding post processing to the images (vibrance mode, vignette)
+* Add option to generate multiple versions (various frame offsets)
 * Add option to trim out credits sequence in the image (the black bar on the far right side)
 * Add option for pallets instead of a single color (maybe each strip is a gradient)
 * Add option for a "series" instead of a single movie (for TV shows or sequels)
