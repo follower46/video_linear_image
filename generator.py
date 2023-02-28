@@ -6,10 +6,12 @@ import shutil
 
 from colorthief import ColorThief
 
-from PIL import Image, ImageDraw
+from PIL import Image, ImageDraw, ImageEnhance
 
 #IMAGE_RESOLUTION = (1920,1080) # HD
 IMAGE_RESOLUTION = (3440,1440) # UWQHD
+#IMAGE_RESOLUTION = (3440,3440) # For Printing At CVS
+
 NUMBER_OF_LINES = 512
 WORK_LOCATION = "temp"
 
@@ -83,6 +85,13 @@ def same_image(file_name, vertial_strips):
         x_location += rectangle_object[0]
     img.save(file_name)
 
+def make_colors_pop(image_location, new_location):
+    img = Image.open(image_location)
+    img = ImageEnhance.Brightness(img).enhance(1.2)
+    img = ImageEnhance.Contrast(img).enhance(1.2)
+    img = ImageEnhance.Color(img).enhance(1.2)
+    img.save(new_location)
+
 
 
 if __name__ == '__main__':
@@ -96,3 +105,4 @@ if __name__ == '__main__':
     extract_video_samples(video_location, WORK_LOCATION)
     colors = get_linear_colors(WORK_LOCATION)
     same_image(f"{base_name}.png", colors)
+    make_colors_pop(f"{base_name}.png", f"{base_name}-pop.png")

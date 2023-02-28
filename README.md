@@ -1,6 +1,8 @@
 # Video Linear Image Generator
 
-An open source image generator for video files, similar to [moviepalette](https://moviepalette.com/)
+An open source image generator for video files, similar to [moviepalette](https://moviepalette.com/). These images can be used for phone wallpapers, desktop screen savers, or used to generate canvas prints from various discount retailers.
+
+![CVS Order](https://raw.githubusercontent.com/follower46/video_linear_image/main/examples/cvs_order.jpg)
 
 ## Examples
 
